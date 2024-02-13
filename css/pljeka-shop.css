@@ -1,26 +1,25 @@
-/* https://jigsaw.w3.org/css-validator/#validate_by_upload */
 html {
-    background-color: #111;
+    background: #111;
     font-family: sans-serif;
 }
 
+/* A step toward Mobile First */
 body {
-    font-size: 2vw;
-    background-color: #333;
+    font-size: 3.5vw;
+    background: #333;
     color: whitesmoke;
     min-height: 100vh;
-    max-width: 90%;
     margin: 0 auto;
     padding: 1rem;
 }
 
 figure {
-    margin-left: 1rem;
+    margin-left: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: auto;
+    height: 20vh;
 }
 
 a,
@@ -48,4 +47,15 @@ caption {
     border: 1px solid bisque;
     font-family: monospace;
     padding: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 2vw;
+        max-width: 80%;
+    }
+
+    img {
+        height: 60vh;
+    }
 }

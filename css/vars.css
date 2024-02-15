@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARS */
+:root {
+    --HF-BG: forestgreen;
+    --HF-COLOR: whitesmoke;
+    --NAV-BG: whitesmoke;
+    --NAV-COLOR: black;
+    --BGCOLOR: orange;
+}
+
+/* this follows the OS color, if browser's appearance is set to System default */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --HF-BG: #333;
+        --HF-COLOR: whitesmoke;
+        --NAV-BG: black;
+        --NAV-COLOR: whitesmoke;
+        --BGCOLOR: #555;
+    }
+}
+
+body {
+    font: 1.5rem sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    position: sticky;
+    background: var(--HF-BG);
+    text-align: center;
+    color: var(--HF-COLOR);
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+nav {
+    background: var(--NAV-BG);
+    padding: .5rem;
+    font-weight: bolder;
+    color: var(--NAV-COLOR);
+}
+
+main {
+    background: var(--BGCOLOR);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
